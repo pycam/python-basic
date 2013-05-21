@@ -1,0 +1,5 @@
+Index Organism Score
+1 Human 1.076
+2 Mouse 1.202
+3 Frog 2.2362
+4 Fly 0.9853
