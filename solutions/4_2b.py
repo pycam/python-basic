@@ -19,6 +19,4 @@ for line in search_file:
     if line in g1k_samples:
         found = 1
     output_file.write(",".join([line, str(found)])+"\n")
-
-
          
