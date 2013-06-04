@@ -1,20 +1,25 @@
+def count_gs_and_cs(sequence):
+
+  return sequence.count( "G" ) + sequence.count( "C" )
+
+
+def is_valid_dna(sequence):
+
+  return set( "ATGC" ).issuperset( sequence )
+
+
 import sys
 
-def gc_content(seq):
-    gc = 0.0
-    for base in seq:
-        if base in "GC":
-            gc += 1
-    gc_content = 100 * (gc / len(seq))
-    return gc_content
+if len( sys.argv ) != 2:
+  print "Usage: %s sequence" % sys.argv[0]
+  sys.exit( 1 )
 
-if len(sys.argv) != 2:
-    print "Please supply a DNA sequence"
-    sys.exit(0)
+sequence = sys.argv[1].upper()
 
-seq = sys.argv[1]
+if not is_valid_dna( sequence ):
+  print "Invalid characters in sequence"
+  sys.exit( 1 )
 
-gc_percent = gc_content(seq)
+print count_gs_and_cs( sequence=sequence )
 
-print "%GC:", gc_percent
 
