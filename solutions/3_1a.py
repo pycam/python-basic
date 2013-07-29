@@ -1,14 +1,18 @@
-def count_gs_and_cs(sequence):
+def simple_mean(x, y):
+    try:
+        mean = (x + y) / 2
+        return mean
+    except:
+        print "Arguments must be numeric"
+        return None
 
-  return sequence.count( "G" ) + sequence.count( "C" )
+def better_mean(values):
+    total = 0
+    for v in values:
+        total += v
+    mean = total / float(len(values))
+    return mean
 
-
-import sys
-
-if len( sys.argv ) != 2:
-  print "Usage: %s sequence" % sys.argv[0]
-  sys.exit( 1 )
-
-print count_gs_and_cs( sequence=sys.argv[1].upper() )
-
+print "Mean of 30 & 60:", simple_mean(30 60)
+print "Mean of values even numbers under 20:", better_mean(range(0, 20, 2))
 

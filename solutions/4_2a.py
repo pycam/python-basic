@@ -1,18 +1,11 @@
-import gzip
-import sys
-import csv
+gene_file = open("../data/genes.txt", "r")
+out_file = open("gene_lengths.txt", "w")
 
-if len( sys.argv ) != 3:
-    print "Usage: %s DATABASE ACCESSION" % sys.argv[0]
-    sys.exit(1)
+for line in gene_file:
+    gene, chrom, start, end = line.split("\t")
+    length = int(end) - int(start) + 1
+    out_file.write("%s %d\n" % (gene, length))
 
-with gzip.GzipFile( sys.argv[1] ) as fobj:
-    reader = csv.reader( fobj )
-  
-    for record in reader:
-        if record[1] == sys.argv[2]:
-            print "Found"
-            sys.exit(0)
-
-print "Not found"
+gene_file.close()
+out_file.close()
 
