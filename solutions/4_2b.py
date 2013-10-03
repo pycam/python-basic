@@ -1,22 +1,22 @@
 import sys
-import gzip
 
-g1k = gzip.GzipFile(sys.argv[1])
+try:
+    filename = sys.argv[1]
+    dna_file = open(filename, "r")
+except IndexError:
+    print "Please supply a filename"
+    sys.exit(0)
+except IOError:
+    print "I can't read the file:", filename
+    sys.exit(0)
 
-g1k_samples = set()
+line_num = 0
 
-for line in g1k:
+for line in dna_file:
     line = line.rstrip()
-    pop, sample_id, sample_name, sex = line.split(",")
-    g1k_samples.add(sample_id)
+    line_num += 1
+    print line_num, ":", len(line)
 
-search_file = open(sys.argv[2])
-output_file = open(sys.argv[3], "w")
+dna_file.close()
 
-for line in search_file:
-    line = line.rstrip()
-    found = 0
-    if line in g1k_samples:
-        found = 1
-    output_file.write(",".join([line, str(found)])+"\n")
-         
+    

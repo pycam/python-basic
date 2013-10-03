@@ -1,22 +1,12 @@
 import sys
 
-try:
-    filename = sys.argv[1]
-    dna_file = open(filename, "r")
-except IndexError:
-    print "Please supply a filename"
-    sys.exit(0)
-except IOError:
-    print "I can't read the file:", filename
+def gc_content(seq):
+    seq = seq.upper()
+    return ( ( seq.count('G') + seq.count('C') ) / float(len(seq)) ) * 100
+
+if len(sys.argv) < 2:
+    print "Please supply some DNA sequence"
     sys.exit(0)
 
-line_num = 0
+print "GC%:", gc_content(sys.argv[1])
 
-for line in dna_file:
-    line = line.rstrip()
-    line_num += 1
-    print line_num, ":", len(line)
-
-dna_file.close()
-
-    
