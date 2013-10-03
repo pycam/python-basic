@@ -19,11 +19,12 @@ def molecular_weight(sequence, molecule_type = 'DNA'):
         total_weight += base_weights[base]
     return total_weight
 
-if len(sys.argv) != 3:
-    print "Usage: %s <molecule_type> <sequence>" % sys.argv[0]
-    sys.exit(0)
 
-weight = molecular_weight(molecule_type = sys.argv[1], sequence = sys.argv[2])
+seq = "AACGUCGAAUCCUAGCGC"
 
-print "Weight:", weight, "g/mol"
+rna_weight = molecular_weight(seq, molecule_type = "RNA")
+dna_weight = molecular_weight(seq.replace('U', 'T'))
+
+print "RNA weight:", rna_weight, "g/mol"
+print "DNA weight:", dna_weight, "g/mol"
 

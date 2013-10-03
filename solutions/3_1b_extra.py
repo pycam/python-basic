@@ -10,11 +10,7 @@ def molecular_weight(sequence):
         total_weight += base_weights[base]
     return total_weight
 
-if len(sys.argv) != 2:
-    print "Usage: %s <sequence>" % sys.argv[0]
-    sys.exit(0)
-
-weight = molecular_weight(sys.argv[1])
+weight = molecular_weight("AAGGACTGTCNCGTNNCGTAGGATNATAGNN")
 
 print "Weight:", weight, "g/mol"
 
