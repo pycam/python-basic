@@ -18,35 +18,35 @@ standardGeneticCode = {
 
 
 def proteinTranslation(seq, geneticCode):
-  """ This function translates a nucleic acid sequence into a
+    """ This function translates a nucleic acid sequence into a
       protein sequence, until the end or until it comes across
-      a stop codon """
-   
-  proteinSeq = []
-  i = 0
-  while i+2 < len(seq):
-    codon = seq[i:i+3]
-    codon.upper()
+      a stop codon 
+    """
+    proteinSeq = []
+    i = 0
+    while i+2 < len(seq):
+        codon = seq[i:i+3]
+        codon.upper()
+        
+        #Check you have RNA sequence
+        if "T" in codon:
+            #raise Exception("Expected RNA sequence, but found T in a codon")
+            codon = codon.replace('T','U') #or just replace instead of raising the exception
+        
+        #Make sure the Codon corresponds to a aminoacid
+        try:
+            aminoAcid = geneticCode[codon]
+        except: 
+            raise Exception("codon %s not in dictionary of genetic code" %codon)
+
+        #Break if stop codon is found
+        if aminoAcid is None: # Found stop codon
+            break
     
-    #Check you have RNA sequence
-    if "T" in codon:
-    	#raise Exception("Expected RNA sequence, but found T in a codon")
-    	codon = codon.replace('T','U') #or just replace instead of raising the exception
+        proteinSeq.append(aminoAcid)
+        i += 3
     
-    #Make sure the Codon corresponds to a aminoacid
-    try:
-    	aminoAcid = geneticCode[codon]
-    except:
-    	raise Exception("codon %s not in dictionary of genetic code" %codon)
-
-	#Break if stop codon is found
-    if aminoAcid is None: # Found stop codon
-      break
-
-    proteinSeq.append(aminoAcid)
-    i += 3
-
-  return proteinSeq
+    return proteinSeq
 
 dnaSeq = 'ATGGTGCATCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTG'
 protein3LetterSeq = proteinTranslation(dnaSeq, standardGeneticCode)
