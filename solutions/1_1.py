@@ -1,4 +1,4 @@
-# experimenting with python variables
+# Experimenting with python variables
 
 S = "TCT"
 L = "CTT"
@@ -7,5 +7,5 @@ C = "TGT"
 
 dna = S + Y + L + Y + C
 
-print "DNA sequence of SYLYC:",dna 
+print "DNA sequence of SYLYC:", dna
 

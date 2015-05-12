@@ -1,5 +1,3 @@
-import sys
-
 def molecular_weight(sequence):
     sequence = sequence.upper()
     base_weights = {'A': 331, 'C': 307, 'G': 347, 'T': 306}

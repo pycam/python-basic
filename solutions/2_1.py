@@ -4,11 +4,10 @@ print "All bases:"
 for base in bases:
     print base
 
+
 print "Every 3rd base:"
-
 pos = 2
-
-while pos <=12:
+while pos <= 12:
     print bases[pos]
     pos += 3
 
