@@ -31,13 +31,14 @@ def protein_translation(seq, geneticCode):
         # Check you have RNA sequence
         if "T" in codon:
             # raise Exception("Expected RNA sequence, but found T in a codon")
-            codon = codon.replace('T', 'U') # or just replace instead of raising the exception
+            codon = codon.replace('T', 'U')  # or just replace instead of raising the exception
         
         # Make sure the codon corresponds to a amino acid
         try:
             aminoAcid = geneticCode[codon]
-        except: 
-            raise Exception("codon %s not in dictionary of genetic code" % codon)
+        except KeyError, e:
+            print e
+            raise KeyError("codon %s not in dictionary of genetic code" % codon)
 
         # Break if stop codon is found
         if aminoAcid is None:  # Found stop codon
