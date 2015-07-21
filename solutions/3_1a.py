@@ -1,6 +1,6 @@
 def simple_mean(x, y):
     try:
-        mean = (x + y) / 2
+        mean = (x + y) / 2.0
         return mean
     except TypeError, e:
         print "Arguments must be numeric", e
