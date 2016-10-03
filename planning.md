@@ -1,17 +1,15 @@
-An Introduction to Solving Biological Problems with Python
-================================================================================
+# Planning and ideas
 
-Divided into 4 sessions over two days.
+'An Introduction to Solving Biological Problems with Python' training can be divided into 4 sessions over two days.
 
 1. DAY 1. MORNING. SESSION 1.: running the Python interpreter, variables and types, arithmetic, basic data structures
 2. DAY 1. AFTERNOON. SESSION 2.: logic & flow control, loops, exceptions, importing libraries
 3. DAY 2. MORNING. SESSION 3.: custom functions, variable scope, some biological examples
 4. DAY 2. AFTERNOON. SESSION 4.: dealing with files, parsing file formats, introduction to BioPython
 
-DAY 1. MORNING. SESSION 1.
---------------------------------------------------------------------------------
+## DAY 1. MORNING. SESSION 1.
 
-### Part 1. [Gabor]
+### Part 1.
 
 INTRO: the python programming language & python interpreter (command line)
 Python is free, cross-platform, widely used, well documented & well supported.
@@ -44,7 +42,7 @@ doing so can mask many errors.
 * [1.1] Print DNA sequence from amino acid one.
 ```
 
-### Part 2. [Anne]
+### Part 2.
 
 As well as the basic data types we introduced, python has several ways of storing
 a collection of values. We are going to see four of them: tuples, lists, sets and
@@ -123,10 +121,9 @@ encode to print out the name of the amino acids of a DNA sequence
 >>> Use dictionaries to store key/value pairs.
 ```
 
-DAY 1. AFTERNOON. SESSION 2.
---------------------------------------------------------------------------------
+## DAY 1. AFTERNOON. SESSION 2.
 
-### Part 1. [Gabor]
+### Part 1.
 
 INTRO: program control and logic - code blocks: if/loops/exceptions.
 Real power of programs comes from repetition and selection. Why indentation?
@@ -169,7 +166,7 @@ Loops let us do things many times. Collections let us store many values together
 [2.2] Calculate the GC content of a DNA sequence
 ```
 
-### Part 2 (after break) [Anne]
+### Part 2 (after break)
 
 Python provides two very important features to handle any unexpected error in your
 Python programs and to add debugging capabilities in them: exceptions and assertions.
@@ -199,10 +196,9 @@ An exception is a Python object that represents an error.
 >>> Use if and else to make choices.
 ```
 
-DAY 2. MORNING. SESSION 3.
---------------------------------------------------------------------------------
+## DAY 2. MORNING. SESSION 3.
 
-### Part 1. [Anne]
+### Part 1.
 
 INTRO: function basics and definition
 A programming language should not include everything anyone might ever want
@@ -235,7 +231,7 @@ In python it is done using the keyword 'def'.
 [3.3] Write a function that counts the number of each base found in a DNA sequence
 ```
 
-### Part 2. [Gabor]
+### Part 2.
 
 - variable scope: globals vs within blocks
 - advanced topics: anonymous functions (lambda); functions as values; nested functions
@@ -259,10 +255,9 @@ BIO examples
 >>> Remember that a function is really just another kind of data.
 ```
 
-Day 2. AFTERNOON. SESSION 4.
---------------------------------------------------------------------------------
+# Day 2. AFTERNOON. SESSION 4.
 
-### Part 1. [Anne]
+### Part 1.
 
 INTRO: In this session we cover 2 widely used ways of reading data into our
 programs, via the command line and by reading files from disk.
@@ -286,7 +281,7 @@ its length and GC content
 [4.1c] Use the argparse library to do the same exercise as above
 ```
 
-### Part 2. [Gabor]
+### Part 2.
 
 - file objects
     - mode modifiers
@@ -335,7 +330,7 @@ on a separate line
 then modify your script to only print python files
 ```
 
-### Part 3. [Anne]
+### Part 3.
 
 - using BioPython
 
