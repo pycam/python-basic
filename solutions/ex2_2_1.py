@@ -1,4 +1,4 @@
-standardGeneticCode = { 
+standardGeneticCode = {
           'UUU': 'Phe', 'UUC': 'Phe', 'UCU': 'Ser', 'UCC': 'Ser',
           'UAU': 'Tyr', 'UAC': 'Tyr', 'UGU': 'Cys', 'UGC': 'Cys',
           'UUA': 'Leu', 'UCA': 'Ser', 'UAA': None, 'UGA': None,
@@ -16,40 +16,37 @@ standardGeneticCode = {
           'GUA': 'Val', 'GUG': 'Val', 'GCA': 'Ala', 'GCG': 'Ala',
           'GAA': 'Glu', 'GAG': 'Glu', 'GGA': 'Gly', 'GGG': 'Gly'}
 
-
-def protein_translation(seq, geneticCode):
-    """ This function translates a nucleic acid sequence into a
+def protein_translation(sequence, geneticCode):
+    """This function translates a nucleic acid sequence into a
     protein sequence, until the end or until it comes across
-    a stop codon
+    a stop codon.
     """
-    proteinSeq = []
-    i = 0
-    while i + 2 < len(seq):
-        codon = seq[i:i + 3]
+    protein_sequence = []
+    for i in range(0, len(sequence)-2, 3):
+        codon = sequence[i:i + 3]
         codon.upper()
-        
-        # Check you have RNA sequence
+
+        # Convert DNA into RNA sequence
         if "T" in codon:
-            # raise Exception("Expected RNA sequence, but found T in a codon")
-            codon = codon.replace('T', 'U')  # or just replace instead of raising the exception
-        
+            # replace T by U
+            codon = codon.replace('T', 'U')
+
         # Make sure the codon corresponds to a amino acid
-        try:
+        if codon in geneticCode:
             aminoAcid = geneticCode[codon]
-        except KeyError, e:
-            print e
-            raise KeyError("codon %s not in dictionary of genetic code" % codon)
+        else:
+            return codon + " codon not in dictionary of genetic code"
 
         # Break if stop codon is found
-        if aminoAcid is None:  # Found stop codon
+        if aminoAcid is None:
             break
-    
-        proteinSeq.append(aminoAcid)
-        i += 3
-    
-    return proteinSeq
 
-dnaSeq = 'ATGGTGCATCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTG'
-print dnaSeq
-protein3LetterSeq = protein_translation(dnaSeq, standardGeneticCode)
-print protein3LetterSeq
+        protein_sequence.append(aminoAcid)
+
+    return protein_sequence
+
+
+dna_sequence = 'ATGGTGCATCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTG'
+print(dna_sequence)
+protein_3letter_sequence = protein_translation(dna_sequence, standardGeneticCode)
+print("".join(protein_3letter_sequence))

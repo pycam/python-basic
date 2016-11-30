@@ -6,4 +6,4 @@
 v1 = 5.0
 v2 = 10.0
 mean = (v1 + v2) / 2
-print mean
+print(mean)

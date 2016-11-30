@@ -8,4 +8,4 @@ seq_list = list(seq)
 unique_amino_acids = set(seq_list)
 
 # Print out the unique amino acids
-print unique_amino_acids
+print(unique_amino_acids)

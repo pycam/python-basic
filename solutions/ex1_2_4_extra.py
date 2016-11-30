@@ -10,7 +10,7 @@ aa_counts['E'] = seq.count('E')
 # etc...
 
 # Print the results in alphabetical order
-print 'A has', aa_counts['A'], 'occurrence(s)'
-print 'C has', aa_counts['C'], 'occurrence(s)'
-print 'D has', aa_counts['D'], 'occurrence(s)'
-print 'E has', aa_counts['E'], 'occurrence(s)'
+print('A has', aa_counts['A'], 'occurrence(s)')
+print('C has', aa_counts['C'], 'occurrence(s)')
+print('D has', aa_counts['D'], 'occurrence(s)')
+print('E has', aa_counts['E'], 'occurrence(s)')

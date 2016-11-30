@@ -6,10 +6,10 @@ filenames = output.split("\n")
 
 for filename in filenames:
     if filename.endswith(".py"):
-        print filename.upper()
+        print(filename.upper())
 
 # using inbuilt listdir() from python
 import os
 for f in os.listdir('.'):
     if f.endswith('.py'):
-        print f.upper()
+        print(f.upper())

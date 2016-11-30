@@ -4,42 +4,42 @@ from Bio.Alphabet import IUPAC
 from Bio.SeqUtils import GC
 
 my_seq=Seq('AAAACCCCGGGGGTTT', IUPAC.unambiguous_dna)
-print my_seq
-print GC(my_seq)
-print my_seq.complement()
-print my_seq.reverse_complement()
-print my_seq.transcribe()
-print my_seq.translate()
+print(my_seq)
+print(GC(my_seq))
+print(my_seq.complement())
+print(my_seq.reverse_complement())
+print(my_seq.transcribe())
+print(my_seq.translate())
 
-print "----------"
+print("----------")
 # read fasta from file
 from Bio import SeqIO
 for seq_record in SeqIO.parse("Course_Materials/data/glpa.fa", "fasta"):
-  print seq_record.id
-  print seq_record.seq
+  print(seq_record.id)
+  print(seq_record.seq)
 
-print "----------"
+print("----------")
 # read fasta from NCBI GenBank
 from Bio import Entrez
 Entrez.email = "A.N.Other@example.com"
 entrez=Entrez.efetch(db='protein', rettype='fasta', id='71066805')
 my_dna=SeqIO.read(entrez, 'fasta')
 entrez.close()
-print my_dna.id
-print my_dna.description
-print my_dna.seq
+print(my_dna.id)
+print(my_dna.description)
+print(my_dna.seq)
 
-print "----------"
+print("----------")
 # read swissprot record from ExPASy
 from Bio import ExPASy
 expasy=ExPASy.get_sprot_raw('HBB_HUMAN')
 my_protein=SeqIO.read(expasy, 'swiss')
 expasy.close()
-print my_protein.id
-print my_protein.description
-print my_protein.seq
+print(my_protein.id)
+print(my_protein.description)
+print(my_protein.seq)
 
-print "----------"
+print("----------")
 # write fasta file
 from Bio.SeqRecord import SeqRecord
 from Bio.Alphabet import generic_protein
@@ -66,11 +66,11 @@ rec3 = SeqRecord(Seq("MVTVEEFRRAQCAEGPATVMAIGTATPSNCVDQSTYPDYYFRITNSEHKVELKEKFKR
                  description="chalcone synthase [Nicotiana tabacum]")
                
 my_records = [rec1, rec2, rec3]
-print rec1.format('fasta')
+print(rec1.format('fasta'))
 
 from Bio import SeqIO
 SeqIO.write(my_records, "my_example.faa", "fasta")
-print 'File created'
+print('File created')
 
 
 

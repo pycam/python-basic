@@ -18,9 +18,9 @@ try:
                     found = 1
                 output_file.write(",".join([line, str(found)]) + "\n")
 
-except IndexError, e:
-    print "Please supply 3 command line arguments"
-    print "Usage: %s 1000genomes search output" % sys.argv[0]
-    print e
-except IOError, e:
-    print "I can't read the file:", e
+except IndexError as e:
+    print("Please supply 3 command line arguments")
+    print("Usage: %s 1000genomes search output" % sys.argv[0])
+    print(e)
+except IOError as e:
+    print("I can't read the file:", e)

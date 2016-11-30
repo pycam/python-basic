@@ -3,17 +3,17 @@
 bases = ['A', 'T', 'T', 'C', 'G', 'G', 'T', 'C', 'A', 'T', 'G', 'C', 'T', 'A', 'A']
 
 # Print the length of the list
-print "DNA sequence length:", len(bases)
+print("DNA sequence length:", len(bases))
 
 # Create a for loop to output every base of the sequence on a new line.
-print "All bases:"
+print("All bases:")
 for base in bases:
-    print base
+    print(base)
 
 # Create a while loop that starts at the third base in the sequence
 # and outputs every third base until the 12th.
-print "Every 3rd base:"
+print("Every 3rd base:")
 pos = 2
 while pos <= 12:
-    print pos, bases[pos]
+    print(pos, bases[pos])
     pos += 3

@@ -14,8 +14,8 @@ genetic_code = {
 }
 
 # Print each codon and its corresponding amino acid
-print codon_list[0], "codes for", genetic_code[codon_list[0]]
-print codon_list[1], "codes for", genetic_code[codon_list[1]]
-print codon_list[2], "codes for", genetic_code[codon_list[2]]
-print codon_list[3], "codes for", genetic_code[codon_list[3]]
-print codon_list[4], "codes for", genetic_code[codon_list[4]]
+print(codon_list[0], "codes for", genetic_code[codon_list[0]])
+print(codon_list[1], "codes for", genetic_code[codon_list[1]])
+print(codon_list[2], "codes for", genetic_code[codon_list[2]])
+print(codon_list[3], "codes for", genetic_code[codon_list[3]])
+print(codon_list[4], "codes for", genetic_code[codon_list[4]])

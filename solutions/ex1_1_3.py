@@ -9,4 +9,4 @@ C = "TGT"
 dna = S + Y + L + Y + C
 
 # print the DNA sequence
-print "DNA sequence of SYLYC:", dna
+print("DNA sequence of SYLYC:", dna)

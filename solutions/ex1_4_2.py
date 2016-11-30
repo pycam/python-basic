@@ -11,8 +11,8 @@ gc = 0.0
 for base in bases:
     if (base == 'G') or (base == 'C'):
         gc += 1
-print "Frequency of GC in the sequence:", gc
+print("Frequency of GC in the sequence:", gc)
 
 # Calculate the GC percentage and print it
 gc_percent = 100 * (gc / len(bases))
-print "%GC:", gc_percent
+print("%GC:", gc_percent)

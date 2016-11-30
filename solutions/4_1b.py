@@ -9,12 +9,12 @@ def gc_content(seq):
     return ((seq.count('G') + seq.count('C')) / float(len(seq))) * 100
 
 if len(sys.argv) < 2:
-    print "Please supply some DNA sequence"
+    print("Please supply some DNA sequence")
     sys.exit(0)
 
 try:
-    print "GC%:", gc_content(sys.argv[1])
-except Exception, e:
-    print e
+    print("GC%:", gc_content(sys.argv[1]))
+except Exception as e:
+    print(e)
 
 

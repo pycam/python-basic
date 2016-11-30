@@ -5,7 +5,7 @@ with open(gene_filename, "r") as gene_file:
             gene, chrom, start, end = line.split("\t")
             length = int(end) - int(start) + 1
             out.write("%s %d\n" % (gene, length))
-    print "gene_lengths.txt created from %s" % gene_filename
+    print("gene_lengths.txt created from %s" % gene_filename)
 
 
 
