@@ -38,6 +38,15 @@ pip install jupyter
 pip install rise
 jupyter-nbextension install rise --py --sys-prefix
 jupyter nbextension enable rise --py --sys-prefix
+
+# biopython
+pip install biopython
+```
+
+On mac OSX you may need to run this command to accept the XCode license, before installing biopython:
+
+```bash
+sudo xcodebuild -license
 ```
 
 ## Usage

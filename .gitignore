@@ -9,3 +9,17 @@ __pycache__/
 .DS_Store
 
 venv
+
+biopython.fa
+
+csvdata.tsv
+
+csvdictdata.tsv
+
+data/mydata.csv
+
+gene_lengths_csv.tsv
+
+gene_lengths.tsv
+
+out.txt
