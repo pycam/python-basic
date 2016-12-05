@@ -23,3 +23,7 @@ gene_lengths_csv.tsv
 gene_lengths.tsv
 
 out.txt
+
+sample.long.fa
+
+mySeqFile.fa

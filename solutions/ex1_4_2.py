@@ -4,7 +4,7 @@
 bases = ['A', 'T', 'T', 'C', 'G', 'G', 'T', 'C', 'A', 'T', 'G', 'C', 'T', 'A', 'A']
 
 # Create a variable, gc, which we will use to count the number of Gs or Cs in our sequence
-gc = 0.0
+gc = 0
 
 # Loop over the bases in your sequence.
 # If the base is a G or a C, add one to your gc variable.
