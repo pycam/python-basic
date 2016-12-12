@@ -38,15 +38,6 @@ pip install jupyter
 pip install rise
 jupyter-nbextension install rise --py --sys-prefix
 jupyter nbextension enable rise --py --sys-prefix
-
-# biopython
-pip install biopython
-```
-
-On mac OSX you may need to run this command to accept the XCode license, before installing biopython:
-
-```bash
-sudo xcodebuild -license
 ```
 
 ## Usage
@@ -56,7 +47,7 @@ Go to the directory where you've cloned this repository, activate your virtual e
 Your web browser should automatically open with this url http://localhost:8888/tree where you see the directory tree of the course with all the jupyter notebooks.
 
 ```bash
-cd python-intro
+cd python-basic
 source venv/bin/activate
 jupyter notebook
 ```
