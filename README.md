@@ -58,4 +58,3 @@ You may wish to deactivate the virtual environment, by entering into the termina
 ```
 deactivate
 ```
-.
