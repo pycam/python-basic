@@ -15,8 +15,3 @@ print("Position of 'e':", pos)
 # or contains the letter 'o'
 pos = surname.find("o")
 print("Position of 'o':", pos)
-
-### Optional --------------------------------------------------------
-
-# Use a format string to print out your first name and the length of your first name
-print("{:s} is {:d} characters long".format(names[0], len(names[0])))
