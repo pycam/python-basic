@@ -2,11 +2,7 @@
 # For each line in the file, print out the line number,
 # the length of the sequence and the sequence
 
-import sys
-
 with open('data/dna.txt', "r") as f:
-    line_num = 0
-    for line in f:
+    for line_num, line in enumerate(f, start=1):
         line = line.rstrip()
-        line_num += 1
-        print(line_num, ":", len(line), "\t", line)
+        print(line_num, "\t", len(line), "\t", line)
