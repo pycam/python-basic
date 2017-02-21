@@ -24,4 +24,4 @@ codons[0] = start
 codons.append(stop)
 
 # Print the resulting DNA sequence
-print("DNA sequence after alteration:", "".join(codons))
+print("DNA sequence after alteration:", codons)
