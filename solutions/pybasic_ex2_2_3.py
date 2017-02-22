@@ -19,4 +19,4 @@ print("Frequency of GC:", gc)
 
 # Calculate the GC percentage and print it
 gc_percent = (gc / len(bases)) * 100
-print("%GC:", gc_percent)
+print("%GC: {:.2f}%".format(gc_percent))
