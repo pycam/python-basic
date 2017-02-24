@@ -1,37 +1,29 @@
-# Read lyrics from file
-with open('data/imagine.txt') as f:
-    lyrics = f.read()
-print(lyrics)
+# Script that reads a tab delimited file which has 4 columns:
+# gene, chromosome, start and end coordinates; that computes each gene's length
+# stores it into a dictionary; and writes the results into a new tab separated file. 
 
-# Change all character to lower ones
-lyrics = lyrics.lower()
+gene_file = ('data/genes.txt')
+output_file = "gene_lengths.txt"
 
-# Split into words
-words = lyrics.split()
-print(words)
+results = []
+# Read a tab delimited file which has 4 columns: gene, chrom, start and end.
+with open(gene_file) as f:
+    header = f.readline()
+    for line in f:
+        gene, chrom, start, end = line.strip().split("\t")
+        # compute the length of each gene and
+        # store its name and corresponding length into a dictionary
+        row = {'gene': gene, 'length': int(end) - int(start) + 1}
+        results.append(row)
+# print results
+print(results)
 
-# Print the total number of words
-print('There are', len(words), 'words in this song.')
+# Write the results into a new tab separated file
+with open(output_file, "w") as out:
+    out.write('gene' + "\t" + 'length' + "\n")  # write header
+    for record in results:
+        out.write(record['gene'] + "\t" + str(record['length']) + "\n")
 
-# Print the number of distinct words
-unique_words = set(words)
-print('There are', len(unique_words), 'distinct words in this song.')
-
-# Calculate the frequency of each word and store the result into a dictionary
-results = {}
-for w in unique_words:
-    results[w.lower()] = words.count(w)
-
-# Print each unique word along with its frequency
-for r in results:
-    print(results[r], '\t', r)
-
-# Find the most frequent word in the song
-most_frequent = 0
-for r in results:
-    if (results[r] > most_frequent) and (len(r) > 3):
-        most_frequent = results[r]
-        most_frequent_word = r
-
-# Print the most frequent word with its frequency
-print(most_frequent_word, 'is the most frequent word being used', most_frequent, 'times.')
+# print contents of output file
+with open(output_file) as f:
+    print(f.read())
