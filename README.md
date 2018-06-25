@@ -1,3 +1,7 @@
+# ARCHIVED - READ ONLY - OLD 3 DAYS COURSE REPO
+
+--- 
+
 # An introduction to solving biological problems with Python - course materials
 
 Materials for the course run by the Graduate School of Life Sciences, University of Cambridge.
