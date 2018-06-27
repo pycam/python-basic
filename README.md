@@ -5,10 +5,11 @@ Materials for the course run by the Graduate School of Life Sciences, University
 - Course website: http://pycam.github.io/
 - Booking website: http://www.training.cam.ac.uk/
 
-## Links for next course running on 28th & 29th Jun 2018
+## Links for next course running on 28th & 29th Jun 2018 at E-learning Suite, School of Clin. Med.
 
 - [A Course Etherpad (a type of electronic whiteboard)](https://etherpad.net/p/28062018_Python_intro_course)
-- [Please give us feedback on this course](https://www.surveymonkey.co.uk/r/PythonUC)  
+- [Please give us feedback on this course](https://www.surveymonkey.co.uk/r/PythonUC)
+- [Details and booking](http://www.training.cam.ac.uk/event/2589506)
 
 
 If you wish to run the course on your personal computer, here are the steps to follow to get up and running.
