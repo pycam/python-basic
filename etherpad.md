@@ -19,6 +19,8 @@ Images can be integrated either via drag and drop or copy and paste.
 - Open Git bash, the terminal we will be using today
 - Open Atom, the text editor we will be using today
 
+# Your feedback
+Please give us feedback on this course https://www.surveymonkey.co.uk/r/PythonUC
 
 # Your questions
 Please feel free to enter any questions here - we will try to answer them ASAP
