@@ -1,4 +1,4 @@
-Systematic_name	Standard_name	Chromosome	Start	End
+systematic_name	standard_name	chrom	start	end
 21S_rRNA_4	21S_RRNA_4	chrmt	61868	62447
 9S_rRNA_1	9S_RRNA_1	chrmt	1	11
 9S_rRNA_5	9S_RRNA_5	chrmt	85290	85779
